@@ -14,4 +14,6 @@ conda create --name myenv --file spec-file.txt
 
 IASI data can be downloaded from: https://iasi.aeris-data.fr/NH3/
 
+Example headers for the IASI data-files (for which these scripts are written) are available here: http://cds-espri.ipsl.fr/etherTypo/index.php?id=1730&L=1
+
 
