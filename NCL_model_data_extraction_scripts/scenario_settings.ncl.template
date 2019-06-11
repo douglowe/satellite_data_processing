@@ -1,0 +1,38 @@
+;
+;  settings for the running of the scripts to extract flight path data
+;    from wrf output files
+;
+
+begin
+
+; define model name
+ModelName = "Clearflo"
+Model_String = "Clearflo"
+ModelDir_String = "./"
+ModelInfoString = "NAEI/TNO emissions"
+
+; define the time period for this particular file
+;Data_Time_Stamp = "20120108_AM"
+Data_Time_Stamp = "%%STAMP%%"
+
+
+; define what kind of dataset we're creating (i.e. full flight path, profiles, no plumes, etc)
+DatasetName = "Ammonia_Column"
+
+; define base directory
+BaseDir = (/"/nerc/n02/n02/lowe/"/)
+; define measurement directory
+MeasDir = BaseDir + (/"Clearflo_data_analysis/satellite_data/"/)
+; define model root directory
+ModelDir = BaseDir + (/"Clearflo_data_files/" + ModelDir_String + Model_String + "/" /)
+
+; define output root directory
+OutputDir = BaseDir + (/"Clearflo_data_analysis/extracted_model_data_test/"/)
+
+; decide what kind of data files we're processing
+data_string = "00.nc"      ; standard compressed NETCDF4
+;data_string = "00_nclassic.nc"  ; 64bit offset NETCDF3
+
+
+
+end
